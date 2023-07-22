@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Bold";
+  src: url(./fonts/SourceSansPro-Bold.otf) format("truetype");
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.5px;
+}
+
+@font-face {
+  font-family: "Semibold";
+  src: url(./fonts/SourceSansPro-SemiBold.otf) format("truetype");
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.5px;
+}
+
+@font-face {
+  font-family: "Regular";
+  src: url(./fonts/SourceSansPro-Regular.otf) format("truetype");
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.5px;
+}
+
+$background-color-grey: #1e1f25;
+$background-color-black: #131517;
+$primary-color: #1b70f1;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.button {
+  display: flex;
+  height: 56px;
+  width: 140px;
+  padding: 13px 26px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 8px;
+
+  &.fill {
+    background-color: $primary-color;
+  }
+}
+
+h1 {
+  font-family: Bold;
+  font-size: 96px;
+  color: #f7faff;
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  font-family: "Bold";
+  font-size: 58px;
+  color: white;
+}
+
+header {
+  padding: 32px 165px;
+  background-color: $background-color-grey;
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  background-color: $background-color-black;
+}
+
+nav {
+  width: 1030px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #adb3bf;
+  font-family: "Regular";
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1590px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.horizontal-line-primary {
+  width: 40px;
+  height: 2px;
+  display: flex;
+  background-color: $primary-color;
+}
+
+.horizontal-line-gradient-green {
+  padding-bottom: 20px;
+  padding-left: 216px;
+}
+
+.vertical-line-header {
+  width: 1px;
+  height: 46px;
+  display: flex;
+  background-color: #adb3bf;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  width: 231px;
+}
+
+.vertical-line-market {
+  width: 1px;
+  height: 40px;
+  display: flex;
+  background-color: white;
+}
+
+.horizontal-line-grey {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+  .line {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.2) 48.42%,
+      rgba(255, 255, 255, 0.04) 100%
+    );
+  }
+}
