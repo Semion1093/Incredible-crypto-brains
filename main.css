@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Bold";
-  src: url(../fonts/SourceSansPro-Bold.otf) format("truetype");
+  src: url(./fonts/SourceSansPro-Bold.otf) format("truetype");
   font-size: 96px;
   font-style: normal;
   font-weight: 700;
@@ -9,7 +9,7 @@
 }
 @font-face {
   font-family: "Semibold";
-  src: url(../fonts/SourceSansPro-SemiBold.otf) format("truetype");
+  src: url(./fonts/SourceSansPro-SemiBold.otf) format("truetype");
   font-size: 96px;
   font-style: normal;
   font-weight: 600;
@@ -18,7 +18,7 @@
 }
 @font-face {
   font-family: "Regular";
-  src: url(../fonts/SourceSansPro-Regular.otf) format("truetype");
+  src: url(./fonts/SourceSansPro-Regular.otf) format("truetype");
   font-size: 96px;
   font-style: normal;
   font-weight: 400;
