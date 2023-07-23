@@ -131,3 +131,32 @@ a {
   }
 }
 
+@media (min-width: 851px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .container {
+    margin: 0;
+    padding: 30px 16px 30px 16px;
+  }
+
+  .horizontal-line-gradient-green {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    padding-left: 0;
+  }
+
+  .horizontal-line-grey {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+

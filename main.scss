@@ -131,13 +131,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
 
-  .trends {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    width: 622px;
+    .trends-items {
+      display: flex;
+      gap: 30px;
+
+      .button {
+        font-family: "Regular";
+        font-size: 20px;
+        line-height: 32px;
+        color: #adb3bf;
+        width: fit-content;
+        padding: 0;
+      }
+    }
   }
 
   .exchange-rates {
@@ -214,6 +221,7 @@
 
   h2 {
     text-align: center;
+    padding-bottom: 30px;
   }
 
   p {
@@ -499,7 +507,7 @@
     color: #adb3bf;
   }
 
-  .gadgets {
+  .gadgets-desktop {
     display: flex;
     padding-top: 65px;
 
@@ -510,7 +518,7 @@
 
     .phone {
       position: relative;
-      right: 580px;
+      right: 275px;
       bottom: 20px;
       transform: rotate(3deg);
     }
@@ -664,32 +672,9 @@
   }
 }
 
-@media (min-width: 851px) {
-  .mobile-only {
-    display: none !important;
-  }
-}
-
 @media (max-width: 850px) {
   .desktop-only {
     display: none !important;
-  }
-
-  .container {
-    margin: 0;
-    padding: 30px 16px 20px 30px;
-  }
-
-  .horizontal-line-gradient-green {
-    display: flex;
-    justify-content: center;
-    padding-top: 16px;
-    padding-left: 0;
-  }
-
-  .horizontal-line-grey {
-    padding-top: 40px;
-    padding-bottom: 40px;
   }
 
   .header-container {
@@ -701,13 +686,6 @@
       padding: 0;
       border: 0;
       background-color: transparent;
-    }
-
-    .header-logo {
-      img {
-        width: 91.304px;
-        height: 28px;
-      }
     }
 
     .mobile-button {
@@ -727,9 +705,14 @@
   }
 
   #hero {
-    display: block;
     padding-top: 20px;
     padding-bottom: 30px;
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     h1 {
       text-align: center;
@@ -743,16 +726,16 @@
 
     .hero-buttons {
       padding-top: 20px;
-      display: grid;
-      grid-template-columns: 1fr;
+      flex-direction: column;
+      min-width: 343px;
       gap: 20px;
 
       #hero-button-regular {
-        width: 100%;
+        width: inherit;
       }
 
       #hero-button-black {
-        width: 100%;
+        width: inherit;
         background-color: white;
         color: $primary-color;
       }
@@ -760,8 +743,11 @@
   }
 
   #trends {
+    padding-bottom: 60px;
+
     .trends-header {
-      display: block;
+      flex-direction: column;
+      height: auto;
 
       h2 {
         text-align: center;
@@ -769,21 +755,23 @@
         padding-bottom: 20px;
       }
 
-      .trends {
-        justify-content: flex-start;
-        overflow: hidden;
+      .trends-items {
         gap: 20px;
+        white-space: nowrap;
+        max-width: 343px;
+        overflow: hidden;
       }
     }
 
     .exchange-rates {
       justify-content: flex-start;
       overflow: hidden;
-      gap: 30px;
+      gap: 13px;
     }
 
     #trends-button {
-      width: 100%;
+      height: 45px;
+      min-width: 343px;
     }
   }
 
@@ -791,6 +779,7 @@
     h2 {
       font-size: 42px;
       text-align: center;
+      padding-bottom: 20px;
     }
 
     .blocks {
@@ -802,6 +791,7 @@
 
         #trading-button {
           background-color: $primary-color;
+          min-width: 343px;
         }
       }
     }
@@ -853,7 +843,7 @@
 
         #card-button {
           background-color: $primary-color;
-          width: 100%;
+          min-width: 343px;
         }
       }
 
@@ -893,6 +883,7 @@
   #apps {
     margin: 0;
     padding: 60px 16px 20px 30px;
+    flex-direction: column;
 
     .text {
       max-width: 100%;
@@ -911,6 +902,7 @@
 
     .links-grid {
       grid-template-columns: 1fr;
+      gap: 20px;
 
       .grid-item {
         background-color: white;
@@ -918,6 +910,22 @@
         span {
           color: $background-color-black;
         }
+      }
+    }
+
+    .gadgets-mobile {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      display: flex;
+
+      .phone {
+        position: absolute;
+      }
+
+      .laptop {
+        position: relative;
+        left: 75px;
+        top: 5px;
       }
     }
   }
@@ -986,22 +994,24 @@
     .footer-bottom {
       flex-direction: column;
       gap: 20px;
-      
+
       text-align: center;
       font-family: "Regular";
       font-size: 14px;
       line-height: 22px;
-      color: #808A9A;
-      
+      color: #808a9a;
+
       .info {
+        display: flex;
+        align-items: center;
         justify-content: center;
         gap: 20px;
-  
+
         span {
           font-family: "Regular";
           font-size: 14px;
           line-height: 22px;
-          color: #FDFDFD;
+          color: #fdfdfd;
         }
       }
     }

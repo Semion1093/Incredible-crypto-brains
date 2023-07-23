@@ -117,6 +117,30 @@ a {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.2) 48.42%, rgba(255, 255, 255, 0.04) 100%);
 }
 
+@media (min-width: 851px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+@media (max-width: 850px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .container {
+    margin: 0;
+    padding: 30px 16px 30px 16px;
+  }
+  .horizontal-line-gradient-green {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    padding-left: 0;
+  }
+  .horizontal-line-grey {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
 .authorize {
   display: flex;
 }
@@ -234,11 +258,18 @@ a {
   align-items: center;
   justify-content: space-between;
 }
-#trends .trends {
+#trends .trends-header .trends-items {
   display: flex;
-  justify-content: space-between;
   gap: 30px;
-  width: 622px;
+}
+#trends .trends-header .trends-items .button {
+  font-family: "Regular";
+  font-size: 20px;
+  line-height: 32px;
+  color: #adb3bf;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0;
 }
 #trends .exchange-rates {
   display: flex;
@@ -305,6 +336,7 @@ a {
 }
 #trading h2 {
   text-align: center;
+  padding-bottom: 30px;
 }
 #trading p {
   text-align: center;
@@ -545,17 +577,17 @@ a {
   line-height: 28px;
   color: #adb3bf;
 }
-#apps .gadgets {
+#apps .gadgets-desktop {
   display: flex;
   padding-top: 65px;
 }
-#apps .gadgets .laptop {
+#apps .gadgets-desktop .laptop {
   position: absolute;
   right: 0;
 }
-#apps .gadgets .phone {
+#apps .gadgets-desktop .phone {
   position: relative;
-  right: 580px;
+  right: 275px;
   bottom: 20px;
   transform: rotate(3deg);
 }
@@ -686,28 +718,9 @@ a {
   color: #fdfdfd;
 }
 
-@media (min-width: 851px) {
-  .mobile-only {
-    display: none !important;
-  }
-}
 @media (max-width: 850px) {
   .desktop-only {
     display: none !important;
-  }
-  .container {
-    margin: 0;
-    padding: 30px 16px 20px 30px;
-  }
-  .horizontal-line-gradient-green {
-    display: flex;
-    justify-content: center;
-    padding-top: 16px;
-    padding-left: 0;
-  }
-  .horizontal-line-grey {
-    padding-top: 40px;
-    padding-bottom: 40px;
   }
   .header-container header {
     padding: 30px 16px 20px 30px;
@@ -716,10 +729,6 @@ a {
     padding: 0;
     border: 0;
     background-color: transparent;
-  }
-  .header-container .header-logo img {
-    width: 91.304px;
-    height: 28px;
   }
   .header-container .mobile-button {
     font-family: "Regular";
@@ -734,9 +743,13 @@ a {
     gap: 30px;
   }
   #hero {
-    display: block;
     padding-top: 20px;
     padding-bottom: 30px;
+  }
+  #hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   #hero h1 {
     text-align: center;
@@ -748,42 +761,49 @@ a {
   }
   #hero .hero-buttons {
     padding-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    min-width: 343px;
     gap: 20px;
   }
   #hero .hero-buttons #hero-button-regular {
-    width: 100%;
+    width: inherit;
   }
   #hero .hero-buttons #hero-button-black {
-    width: 100%;
+    width: inherit;
     background-color: white;
     color: #1b70f1;
   }
+  #trends {
+    padding-bottom: 60px;
+  }
   #trends .trends-header {
-    display: block;
+    flex-direction: column;
+    height: auto;
   }
   #trends .trends-header h2 {
     text-align: center;
     font-size: 42px;
     padding-bottom: 20px;
   }
-  #trends .trends-header .trends {
-    justify-content: flex-start;
-    overflow: hidden;
+  #trends .trends-header .trends-items {
     gap: 20px;
+    white-space: nowrap;
+    max-width: 343px;
+    overflow: hidden;
   }
   #trends .exchange-rates {
     justify-content: flex-start;
     overflow: hidden;
-    gap: 30px;
+    gap: 13px;
   }
   #trends #trends-button {
-    width: 100%;
+    height: 45px;
+    min-width: 343px;
   }
   #trading h2 {
     font-size: 42px;
     text-align: center;
+    padding-bottom: 20px;
   }
   #trading .blocks {
     flex-direction: column;
@@ -794,6 +814,7 @@ a {
   }
   #trading .blocks .trading-block #trading-button {
     background-color: #1b70f1;
+    min-width: 343px;
   }
   #buy-reasons h2 {
     font-size: 42px;
@@ -835,7 +856,7 @@ a {
   }
   #buy-reasons .reasons-card .card #card-button {
     background-color: #1b70f1;
-    width: 100%;
+    min-width: 343px;
   }
   #buy-reasons .reasons-card .pagination {
     display: flex;
@@ -864,6 +885,7 @@ a {
   #apps {
     margin: 0;
     padding: 60px 16px 20px 30px;
+    flex-direction: column;
   }
   #apps .text {
     max-width: 100%;
@@ -879,12 +901,26 @@ a {
   }
   #apps .links-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   #apps .links-grid .grid-item {
     background-color: white;
   }
   #apps .links-grid .grid-item span {
     color: #131517;
+  }
+  #apps .gadgets-mobile {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+  }
+  #apps .gadgets-mobile .phone {
+    position: absolute;
+  }
+  #apps .gadgets-mobile .laptop {
+    position: relative;
+    left: 75px;
+    top: 5px;
   }
   #faq .text h2 {
     font-size: 42px;
@@ -939,9 +975,11 @@ a {
     font-family: "Regular";
     font-size: 14px;
     line-height: 22px;
-    color: #808A9A;
+    color: #808a9a;
   }
   #footer .footer-bottom .info {
+    display: flex;
+    align-items: center;
     justify-content: center;
     gap: 20px;
   }
@@ -949,6 +987,6 @@ a {
     font-family: "Regular";
     font-size: 14px;
     line-height: 22px;
-    color: #FDFDFD;
+    color: #fdfdfd;
   }
 }/*# sourceMappingURL=main.css.map */
