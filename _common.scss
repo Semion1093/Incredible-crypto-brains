@@ -67,10 +67,8 @@ h2 {
 }
 
 header {
-  padding: 32px 165px;
+  padding: 32px;
   background-color: $background-color-grey;
-  display: flex;
-  justify-content: space-between;
 }
 
 body {
@@ -111,19 +109,6 @@ a {
   padding-left: 216px;
 }
 
-.vertical-line-header {
-  width: 1px;
-  height: 46px;
-  display: flex;
-  background-color: #adb3bf;
-}
-
-.logo {
-  display: flex;
-  justify-content: space-between;
-  width: 231px;
-}
-
 .vertical-line-market {
   width: 1px;
   height: 40px;
@@ -132,8 +117,8 @@ a {
 }
 
 .horizontal-line-grey {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   .line {
     height: 1px;
@@ -145,3 +130,4 @@ a {
     );
   }
 }
+
