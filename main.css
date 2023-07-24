@@ -485,10 +485,10 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-#reviews h2 {
+#reviews .reviews-header h2 {
   width: 645px;
 }
-#reviews span {
+#reviews .reviews-header span {
   font-family: "Regular";
   font-size: 18px;
   line-height: 28px;
@@ -507,25 +507,25 @@ a {
   padding: 40px 30px;
   gap: 30px;
 }
-#reviews .person-grid {
+#reviews .card-item .person-grid {
   display: grid;
   width: 585px;
   grid-template-columns: 72px 401px 72px;
   gap: 20px;
 }
-#reviews .person-name {
+#reviews .card-item .person-name {
   font-family: "Semibold";
   font-size: 20px;
   line-height: 32px;
   color: white;
 }
-#reviews .country {
+#reviews .card-item .country {
   font-family: "Regular";
   font-size: 14px;
   line-height: 20px;
   color: #bfc4cd;
 }
-#reviews p {
+#reviews .card-item p {
   font-family: "Regular";
   font-size: 24px;
   line-height: 36px;
@@ -882,9 +882,12 @@ a {
     max-width: 100%;
     gap: 10px;
   }
+  #reviews .card-item p {
+    text-align: center;
+  }
   #apps {
     margin: 0;
-    padding: 60px 16px 20px 30px;
+    padding: 60px 16px 20px 16px;
     flex-direction: column;
   }
   #apps .text {
