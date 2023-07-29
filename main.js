@@ -5,3 +5,4 @@ function toggleNavVisibility(){
 
    nav.style.visibility = navVisibility == "visible" ? 'hidden' : "visible";
 }
+
