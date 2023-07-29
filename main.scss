@@ -17,6 +17,14 @@
   justify-content: space-between;
   max-width: 1590px;
   margin: 0 auto;
+  
+  nav {
+    width: 1030px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
 
   .vertical-line-header {
     width: 1px;
@@ -682,6 +690,20 @@
       padding: 30px 16px 20px 30px;
     }
 
+    nav {
+      position: absolute;
+      flex-direction: column;
+      align-items: flex-end;
+      top: 110px;
+      padding: 30px;
+      padding-top: 0;
+      gap: 20px;
+      max-width: 100%;
+      right: 0;
+      background-color: $background-color-grey;
+      visibility: hidden;
+    }
+
     .icon-button {
       padding: 0;
       border: 0;
@@ -702,7 +724,7 @@
       align-items: center;
       gap: 30px;
     }
-  }
+}
 
   #hero {
     padding-top: 20px;

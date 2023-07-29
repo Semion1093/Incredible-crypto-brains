@@ -67,14 +67,6 @@ body {
   background-color: #131517;
 }
 
-nav {
-  width: 1030px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
 a {
   text-decoration: none;
   color: #adb3bf;
@@ -158,6 +150,13 @@ a {
   justify-content: space-between;
   max-width: 1590px;
   margin: 0 auto;
+}
+.header-container nav {
+  width: 1030px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 .header-container .vertical-line-header {
   width: 1px;
@@ -724,6 +723,19 @@ a {
   }
   .header-container header {
     padding: 30px 16px 20px 30px;
+  }
+  .header-container nav {
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 110px;
+    padding: 30px;
+    padding-top: 0;
+    gap: 20px;
+    max-width: 100%;
+    right: 0;
+    background-color: #1e1f25;
+    visibility: hidden;
   }
   .header-container .icon-button {
     padding: 0;
