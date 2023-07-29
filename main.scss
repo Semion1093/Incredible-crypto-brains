@@ -17,7 +17,7 @@
   justify-content: space-between;
   max-width: 1590px;
   margin: 0 auto;
-  
+
   nav {
     width: 1030px;
     display: flex;
@@ -411,7 +411,7 @@
     h2 {
       width: 645px;
     }
-  
+
     span {
       font-family: "Regular";
       font-size: 18px;
@@ -440,21 +440,21 @@
       grid-template-columns: 72px 401px 72px;
       gap: 20px;
     }
-  
+
     .person-name {
       font-family: "Semibold";
       font-size: 20px;
       line-height: 32px;
       color: white;
     }
-  
+
     .country {
       font-family: "Regular";
       font-size: 14px;
       line-height: 20px;
       color: #bfc4cd;
     }
-  
+
     p {
       font-family: "Regular";
       font-size: 24px;
@@ -724,7 +724,7 @@
       align-items: center;
       gap: 30px;
     }
-}
+  }
 
   #hero {
     padding-top: 20px;
