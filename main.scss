@@ -469,6 +469,24 @@
     justify-content: center;
     gap: 10px;
   }
+  
+  .pagination-item-white {
+    width: 40px;
+    height: 4px;
+    background-color: #CFD3DA;
+  }
+
+  .pagination-item-grey {
+    width: 30px;
+    height: 4px;
+    background-color: #6c7077;
+  }
+
+  .pagination-item-grey:hover {
+    width: 40px;
+    height: 4px;
+    background-color: #CFD3DA;
+  }
 }
 
 #apps {
