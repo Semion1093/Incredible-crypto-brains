@@ -11,7 +11,7 @@
   gap: 12px;
 }
 
-.header-container {
+#header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -685,7 +685,7 @@
     display: none !important;
   }
 
-  .header-container {
+  #header-container {
     header {
       padding: 30px 16px 20px 30px;
     }

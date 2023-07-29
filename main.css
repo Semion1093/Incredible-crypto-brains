@@ -144,27 +144,27 @@ a {
   gap: 12px;
 }
 
-.header-container {
+#header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1590px;
   margin: 0 auto;
 }
-.header-container nav {
+#header-container nav {
   width: 1030px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
 }
-.header-container .vertical-line-header {
+#header-container .vertical-line-header {
   width: 1px;
   height: 46px;
   display: flex;
   background-color: #adb3bf;
 }
-.header-container .header-logo {
+#header-container .header-logo {
   display: flex;
   justify-content: space-between;
   width: 231px;
@@ -721,10 +721,10 @@ a {
   .desktop-only {
     display: none !important;
   }
-  .header-container header {
+  #header-container header {
     padding: 30px 16px 20px 30px;
   }
-  .header-container nav {
+  #header-container nav {
     position: absolute;
     flex-direction: column;
     align-items: flex-end;
@@ -737,19 +737,19 @@ a {
     background-color: #1e1f25;
     visibility: hidden;
   }
-  .header-container .icon-button {
+  #header-container .icon-button {
     padding: 0;
     border: 0;
     background-color: transparent;
   }
-  .header-container .mobile-button {
+  #header-container .mobile-button {
     font-family: "Regular";
     font-size: 14px;
     line-height: 22px;
     color: #cfd3da;
     width: 60px;
   }
-  .header-container .mobile-header {
+  #header-container .mobile-header {
     display: flex;
     align-items: center;
     gap: 30px;
