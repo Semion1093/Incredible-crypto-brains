@@ -5,3 +5,14 @@ function setNavVisibility(){
 
    nav.style.visibility = navVisibility == "visible" ? 'hidden' : "visible";
 }
+
+function expandElement(id){
+   let button = document.getElementById(id);
+   let question = button.parentElement.parentElement.childNodes[3];
+
+   let rotation = button.style.transform;
+   button.style.transform = rotation != "rotate(-45deg)" ? "rotate(-45deg)" : "rotate(0deg)";
+
+   let display = question.style.display;
+   question.style.display = display == "block" ? "none" : "block";
+}

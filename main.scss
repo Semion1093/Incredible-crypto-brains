@@ -19,24 +19,15 @@
   margin: 0 auto;
 
   nav {
-    width: 1030px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
   }
 
-  .vertical-line-header {
-    width: 1px;
-    height: 46px;
-    display: flex;
-    background-color: #adb3bf;
-  }
-
   .header-logo {
-    display: flex;
-    justify-content: space-between;
-    width: 231px;
+    padding-right: 40px;
+    border-right: 1px solid #adb3bf;
   }
 }
 
@@ -65,7 +56,7 @@
 
   .hero-buttons {
     display: flex;
-    padding-top: 80px;
+    margin-top: 80px;
     gap: 30px;
   }
 
@@ -144,13 +135,9 @@
       display: flex;
       gap: 30px;
 
-      .button {
-        font-family: "Regular";
+      a {
         font-size: 20px;
         line-height: 32px;
-        color: #adb3bf;
-        width: fit-content;
-        padding: 0;
       }
     }
   }
@@ -159,7 +146,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
 
   .exchange-item {
@@ -334,7 +321,7 @@
   .reasons-grid {
     display: grid;
     align-items: center;
-    grid-template-columns: 73px 437px 200px;
+    grid-template-columns: 73px 437px 160px;
     gap: 20px;
 
     .number {
@@ -370,13 +357,9 @@
       );
     }
 
-    #grid-button {
-      width: 160px;
-      height: 48px;
-      padding: 13px 26px;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
+    .button {
+      width: auto;
+      padding: 0;
     }
 
     span {
@@ -469,23 +452,29 @@
     justify-content: center;
     gap: 10px;
   }
-  
+
   .pagination-item-white {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
     width: 40px;
     height: 4px;
-    background-color: #CFD3DA;
+    background-color: #cfd3da;
   }
 
   .pagination-item-grey {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
     width: 30px;
     height: 4px;
     background-color: #6c7077;
   }
 
   .pagination-item-grey:hover {
-    width: 40px;
+    width: 30px;
     height: 4px;
-    background-color: #CFD3DA;
+    background-color: #cfd3da;
   }
 }
 
@@ -552,42 +541,75 @@
 }
 
 #faq {
-  h2 {
-    padding-bottom: 30px;
-    text-align: center;
-  }
+  .text {
+    h2 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
 
-  p {
-    font-family: "Regular";
-    font-size: 18px;
-    line-height: 28px;
-    color: #adb3bf;
-    text-align: center;
-  }
-
-  .grid-faq {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-
-    .grid-item {
-      border-radius: 4px;
-      border: 2px solid #1e1f25;
+    span {
+      font-family: "Regular";
+      font-size: 18px;
+      line-height: 28px;
+      color: #adb3bf;
+      display: flex;
+      justify-content: center;
     }
   }
 
-  .question {
+  .flex-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    gap: 30px;
 
-    span {
-      font-family: "Semibold";
-      font-size: 24px;
-      line-height: 36px;
-      color: white;
+    &.left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &.right {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .flex-item {
+      border-radius: 4px;
+      border: 2px solid #1e1f25;
+      width: 780px;
+    }
+
+    .question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+
+
+      span {
+        font-family: "Semibold";
+        font-size: 24px;
+        line-height: 36px;
+        color: white;
+      }
+
+      button {
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+        transform: rotate(0deg);
+        transition: 0.5s;
+      }
+    }
+
+
+    p {
+      font-family: "Regular";
+      font-size: 18px;
+      line-height: 28px;
+      width: 700px;
+      color: #adb3bf;
+      text-align: left;
+      padding: 0 20px 20px 20px; 
+      display: none;
     }
   }
 }
