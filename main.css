@@ -519,25 +519,23 @@ a {
   justify-content: center;
   gap: 10px;
 }
-#reviews .pagination-item-white {
+#reviews .pagination-item {
   padding: 0;
   border: 0;
   background-color: transparent;
+  transition: 0.5s;
+}
+#reviews .pagination-item.white {
   width: 40px;
   height: 4px;
   background-color: #cfd3da;
 }
-#reviews .pagination-item-grey {
-  padding: 0;
-  border: 0;
-  background-color: transparent;
+#reviews .pagination-item.grey {
   width: 30px;
   height: 4px;
   background-color: #6c7077;
 }
-#reviews .pagination-item-grey:hover {
-  width: 30px;
-  height: 4px;
+#reviews .pagination-item:hover {
   background-color: #cfd3da;
 }
 
@@ -640,10 +638,9 @@ a {
   padding: 0;
   border: 0;
   background-color: transparent;
-  transform: rotate(0deg);
   transition: 0.5s;
 }
-#faq .flex-container p {
+#faq .flex-container .text {
   font-family: "Regular";
   font-size: 18px;
   line-height: 28px;
@@ -651,7 +648,12 @@ a {
   color: #adb3bf;
   text-align: left;
   padding: 0 20px 20px 20px;
+}
+#faq .flex-container .text.turned {
   display: none;
+}
+#faq .flex-container .text.expanded {
+  display: block;
 }
 
 #footer {

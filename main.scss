@@ -453,27 +453,26 @@
     gap: 10px;
   }
 
-  .pagination-item-white {
+  .pagination-item {
     padding: 0;
     border: 0;
     background-color: transparent;
-    width: 40px;
-    height: 4px;
-    background-color: #cfd3da;
+    transition: 0.5s;
+
+    &.white {
+      width: 40px;
+      height: 4px;
+      background-color: #cfd3da;
+    }
+
+    &.grey {
+      width: 30px;
+      height: 4px;
+      background-color: #6c7077;
+    }
   }
 
-  .pagination-item-grey {
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-    width: 30px;
-    height: 4px;
-    background-color: #6c7077;
-  }
-
-  .pagination-item-grey:hover {
-    width: 30px;
-    height: 4px;
+  .pagination-item:hover {
     background-color: #cfd3da;
   }
 }
@@ -583,7 +582,6 @@
       align-items: center;
       padding: 20px;
 
-
       span {
         font-family: "Semibold";
         font-size: 24px;
@@ -595,21 +593,26 @@
         padding: 0;
         border: 0;
         background-color: transparent;
-        transform: rotate(0deg);
         transition: 0.5s;
       }
     }
 
-
-    p {
+    .text {
       font-family: "Regular";
       font-size: 18px;
       line-height: 28px;
       width: 700px;
       color: #adb3bf;
       text-align: left;
-      padding: 0 20px 20px 20px; 
-      display: none;
+      padding: 0 20px 20px 20px;
+
+      &.turned {
+        display: none;
+      }
+  
+      &.expanded {
+        display: block;
+      }
     }
   }
 }
