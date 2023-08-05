@@ -7,12 +7,8 @@ function setNavVisibility() {
 
 function doSlide(id) {
   const marginValue = 675;
-  const newFirstCard = document.querySelector(
-    "#reviews .card-item:first-child"
-  );
-  let paginationButtons = document.querySelectorAll(
-    "#reviews .pagination-item"
-  );
+  const newFirstCard = document.querySelector("#reviews .card-item:first-child");
+  let paginationButtons = document.querySelectorAll("#reviews .pagination-item");
 
   newFirstCard.style.marginLeft = -marginValue * id + "px";
 
