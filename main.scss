@@ -417,6 +417,10 @@
     padding: 40px 30px;
     gap: 30px;
 
+    &:first-child {
+      transition: all .4s ease;
+    }
+
     .person-grid {
       display: grid;
       width: 585px;
