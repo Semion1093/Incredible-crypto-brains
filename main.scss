@@ -418,7 +418,7 @@
     gap: 30px;
 
     &:first-child {
-      transition: all .4s ease;
+      transition: all 0.4s ease;
     }
 
     .person-grid {
@@ -613,7 +613,7 @@
       &.turned {
         display: none;
       }
-  
+
       &.expanded {
         display: block;
       }
