@@ -8,8 +8,12 @@ function setNavVisibility() {
 const gap = 30;
 
 function doReviewSlide(id) {
-  const newFirstCard = document.querySelector("#reviews .card-item:first-child");
-  let paginationButtons = document.querySelectorAll("#reviews .pagination-item");
+  const newFirstCard = document.querySelector(
+    "#reviews .card-item:first-child"
+  );
+  let paginationButtons = document.querySelectorAll(
+    "#reviews .pagination-item"
+  );
   let marginValue = newFirstCard.clientWidth;
 
   doSlide(newFirstCard, id, marginValue, paginationButtons);
@@ -27,8 +31,7 @@ function doSlide(newFirstCard, id, marginValue, paginationButtons) {
   newFirstCard.style.marginLeft = (-marginValue - gap) * id + "px";
 
   for (const item of paginationButtons) {
-    item.className =
-      item.id == id ? "pagination-item white" : "pagination-item grey";
+    item.className = item.id == id ? "pagination-item white" : "pagination-item grey";
   }
 }
 
