@@ -9,7 +9,7 @@
 <body>
 <header>
     <div id="header-container">
-        <div class="header-logo">
+        <div class="header-logo desktop-only">
             <img src="./assest/header-logo.png">
         </div>
         <nav>
@@ -36,7 +36,12 @@
             <a href="#" class="button desktop-only">Sign In</a>
             <a href="#" class="button fill desktop-only">Sing Up</a>
         </div>
-        <div class="mobile-header mobile-only">
+    </div>
+    <div class="mobile-header mobile-only">
+        <div class="mobile-header-logo">
+            <img src="./assest/mobile/logo-mobile.png">
+        </div>
+        <div class="mobile-nav">
             <a href="#" class="mobile-button">Sing Up</a>
             <button class="icon-button mobile-only" onclick="setNavVisibility()"><img src="./assest/mobile/menu-mobile.png"></button>
         </div>
@@ -343,25 +348,39 @@
     </div>
     <div class="reasons-card mobile-only">
         <img src="./assest/reasons-card.png">
-        <div class="card">
+        <div class="reason-cards">
             <div class="card-item">
                 <span class="number">01</span>
+                <span class="idea">Easy Trading</span>
+                <span class="argument">It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
+                <a href="#" id="card-button" class="button"><span>Start Now</span><img src="./assest/arrow-button.png"></a>
             </div>
             <div class="card-item">
-                <div class="idea">Easy Trading</div>
-                <div class="argument">It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</div>
+                <span class="number">02</span>
+                <span class="idea">24/7 Help Service</span>
+                <span class="argument">It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
+                <a href="#" id="card-button" class="button"><span>Start Now</span><img src="./assest/arrow-button.png"></a>
             </div>
             <div class="card-item">
+                <span class="number">03</span>
+                <span class="idea">Fast Service</span>
+                <span class="argument">It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
+                <a href="#" id="card-button" class="button"><span>Start Now</span><img src="./assest/arrow-button.png"></a>
+            </div>
+            <div class="card-item">
+                <span class="number">04</span>
+                <span class="idea">Low Charges</span>
+                <span class="argument">It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
                 <a href="#" id="card-button" class="button"><span>Start Now</span><img src="./assest/arrow-button.png"></a>
             </div>
         </div>
         <div class="pagination">
-            <button class="pagination-item-white"></button> 
-            <button class="pagination-item-grey"></button>
-            <button class="pagination-item-grey"></button>
-            <button class="pagination-item-grey"></button>
-        </div>  
-    </div>
+            <button id="0" class="pagination-item white" onclick="doReasonSlide(this.id)"></button>
+            <button id="1" class="pagination-item grey" onclick="doReasonSlide(this.id)"></button>
+            <button id="2" class="pagination-item grey" onclick="doReasonSlide(this.id)"></button>
+            <button id="3" class="pagination-item grey" onclick="doReasonSlide(this.id)"></button>
+        </div>
+    </div>  
 </section>
 <section id="reviews" class="container">
     <div class="reviews-container">
@@ -373,7 +392,7 @@
         <div class="horizontal-line-grey">
             <div class="line"></div>
         </div>
-        <div class="carousel">
+        <div class="reviews-carousel">
             <div class="review-cards">
                 <div class="card-item">
                     <div class="person-grid">
@@ -443,10 +462,10 @@
                 </div>
             </div>
             <div class="pagination">
-                <button id="0" class="pagination-item white" onclick="doSlide(this.id)"></button>
-                <button id="1" class="pagination-item grey" onclick="doSlide(this.id)"></button>
-                <button id="2" class="pagination-item grey" onclick="doSlide(this.id)"></button>
-                <button id="3" class="pagination-item grey" onclick="doSlide(this.id)"></button>
+                <button id="0" class="pagination-item white" onclick="doReviewSlide(this.id)"></button>
+                <button id="1" class="pagination-item grey" onclick="doReviewSlide(this.id)"></button>
+                <button id="2" class="pagination-item grey" onclick="doReviewSlide(this.id)"></button>
+                <button id="3" class="pagination-item grey" onclick="doReviewSlide(this.id)"></button>
             </div>
         </div>
     </div>

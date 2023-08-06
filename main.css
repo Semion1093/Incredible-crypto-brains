@@ -487,7 +487,6 @@ a {
   background: #272a34;
   width: 645px;
   padding: 40px 30px;
-  gap: 30px;
 }
 #reviews .card-item:first-child {
   transition: all 0.4s ease;
@@ -762,31 +761,36 @@ a {
     position: absolute;
     flex-direction: column;
     align-items: flex-end;
-    top: 110px;
+    top: 80px;
+    width: 100%;
     padding: 30px;
-    padding-top: 0;
     gap: 20px;
-    max-width: 100%;
     right: 0;
     background-color: #1e1f25;
     visibility: hidden;
   }
-  #header-container .icon-button {
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .mobile-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .icon-button {
     padding: 0;
     border: 0;
     background-color: transparent;
   }
-  #header-container .mobile-button {
+  .mobile-button {
     font-family: "Regular";
     font-size: 14px;
     line-height: 22px;
     color: #cfd3da;
     width: 60px;
-  }
-  #header-container .mobile-header {
-    display: flex;
-    align-items: center;
-    gap: 30px;
   }
   #hero {
     padding-top: 20px;
@@ -872,20 +876,27 @@ a {
   #buy-reasons .reasons-card {
     flex-direction: column;
   }
-  #buy-reasons .reasons-card .card {
+  #buy-reasons .reasons-card .reason-cards {
+    display: flex;
+    gap: 30px;
+  }
+  #buy-reasons .reasons-card .card-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     gap: 20px;
   }
-  #buy-reasons .reasons-card .card .number {
+  #buy-reasons .reasons-card .card-item:first-child {
+    transition: all 0.4s ease;
+  }
+  #buy-reasons .reasons-card .card-item .number {
     font-family: "Regular";
     font-size: 58px;
     color: #272a34;
   }
-  #buy-reasons .reasons-card .card .idea {
+  #buy-reasons .reasons-card .card-item .idea {
     text-align: center;
     font-family: "Semibold";
     font-size: 20px;
@@ -893,22 +904,37 @@ a {
     color: white;
     border-bottom: 12px;
   }
-  #buy-reasons .reasons-card .card .argument {
+  #buy-reasons .reasons-card .card-item .argument {
     text-align: center;
     font-family: "Regular";
     font-size: 14px;
     line-height: 22px;
     color: #808a9a;
   }
-  #buy-reasons .reasons-card .card #card-button {
+  #buy-reasons .reasons-card .card-item #card-button {
     background-color: #1b70f1;
     min-width: 343px;
   }
   #buy-reasons .reasons-card .pagination {
     display: flex;
     justify-content: center;
-    padding-bottom: 62px;
     gap: 10px;
+  }
+  #buy-reasons .reasons-card .pagination .pagination-item {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    transition: 0.5s;
+  }
+  #buy-reasons .reasons-card .pagination .pagination-item.white {
+    width: 40px;
+    height: 4px;
+    background-color: #cfd3da;
+  }
+  #buy-reasons .reasons-card .pagination .pagination-item.grey {
+    width: 30px;
+    height: 4px;
+    background-color: #6c7077;
   }
   #reviews .reviews-header {
     display: block;
@@ -977,15 +1003,21 @@ a {
   #faq .text p {
     font-size: 16px;
   }
-  #faq .grid-faq {
-    grid-template-columns: 1fr;
+  #faq .flex-container {
+    flex-direction: column;
   }
-  #faq .grid-faq .question {
+  #faq .flex-container .flex-item {
+    width: 358px;
+  }
+  #faq .flex-container .flex-item .question {
     gap: 20px;
   }
-  #faq .grid-faq span {
+  #faq .flex-container .flex-item span {
     font-size: 18px;
     line-height: 28px;
+  }
+  #faq .flex-container .flex-item .text {
+    width: 358px;
   }
   #footer .horizontal-line-grey {
     padding-top: 20px;

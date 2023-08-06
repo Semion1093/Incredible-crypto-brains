@@ -415,7 +415,6 @@
     background: #272a34;
     width: 645px;
     padding: 40px 30px;
-    gap: 30px;
 
     &:first-child {
       transition: all 0.4s ease;
@@ -741,36 +740,41 @@
       position: absolute;
       flex-direction: column;
       align-items: flex-end;
-      top: 110px;
+      top: 80px;
+      width: 100%;
       padding: 30px;
-      padding-top: 0;
       gap: 20px;
-      max-width: 100%;
       right: 0;
       background-color: $background-color-grey;
       visibility: hidden;
     }
+  }
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
 
-    .icon-button {
-      padding: 0;
-      border: 0;
-      background-color: transparent;
-    }
+  .mobile-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
 
-    .mobile-button {
-      font-family: "Regular";
-      font-size: 14px;
-      line-height: 22px;
-      color: #cfd3da;
-      $background-color-grey: #1e1f25;
-      width: 60px;
-    }
+  .icon-button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+  }
 
-    .mobile-header {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
+  .mobile-button {
+    font-family: "Regular";
+    font-size: 14px;
+    line-height: 22px;
+    color: #cfd3da;
+    $background-color-grey: #1e1f25;
+    width: 60px;
   }
 
   #hero {
@@ -879,13 +883,22 @@
     .reasons-card {
       flex-direction: column;
 
-      .card {
+      .reason-cards {
+        display: flex;
+        gap: 30px;
+      }
+
+      .card-item {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        margin-top: 40px;
+        margin-bottom: 40px;
         gap: 20px;
+
+        &:first-child {
+          transition: all 0.4s ease;
+        }
 
         .number {
           font-family: "Regular";
@@ -919,8 +932,26 @@
       .pagination {
         display: flex;
         justify-content: center;
-        padding-bottom: 62px;
         gap: 10px;
+
+        .pagination-item {
+          padding: 0;
+          border: 0;
+          background-color: transparent;
+          transition: 0.5s;
+
+          &.white {
+            width: 40px;
+            height: 4px;
+            background-color: #cfd3da;
+          }
+
+          &.grey {
+            width: 30px;
+            height: 4px;
+            background-color: #6c7077;
+          }
+        }
       }
     }
   }
@@ -1014,15 +1045,24 @@
       }
     }
 
-    .grid-faq {
-      grid-template-columns: 1fr;
+    .flex-container {
+      flex-direction: column;
 
-      .question {
-        gap: 20px;
-      }
-      span {
-        font-size: 18px;
-        line-height: 28px;
+      .flex-item {
+        width: 358px;
+
+        .question {
+          gap: 20px;
+        }
+
+        span {
+          font-size: 18px;
+          line-height: 28px;
+        }
+
+        .text {
+          width: 358px;
+        }
       }
     }
   }

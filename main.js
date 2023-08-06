@@ -5,12 +5,26 @@ function setNavVisibility() {
   nav.style.visibility = navVisibility == "visible" ? "hidden" : "visible";
 }
 
-function doSlide(id) {
-  const marginValue = 675;
+const gap = 30;
+
+function doReviewSlide(id) {
   const newFirstCard = document.querySelector("#reviews .card-item:first-child");
   let paginationButtons = document.querySelectorAll("#reviews .pagination-item");
+  let marginValue = newFirstCard.clientWidth;
 
-  newFirstCard.style.marginLeft = -marginValue * id + "px";
+  doSlide(newFirstCard, id, marginValue, paginationButtons);
+}
+
+function doReasonSlide(id) {
+  const newFirstCard = document.querySelector("#buy-reasons .reasons-card .card-item:first-child");
+  let paginationButtons = document.querySelectorAll("#buy-reasons .reasons-card .pagination-item");
+  let marginValue = newFirstCard.clientWidth;
+
+  doSlide(newFirstCard, id, marginValue, paginationButtons);
+}
+
+function doSlide(newFirstCard, id, marginValue, paginationButtons) {
+  newFirstCard.style.marginLeft = (-marginValue - gap) * id + "px";
 
   for (const item of paginationButtons) {
     item.className =
